@@ -1,0 +1,15 @@
+package command
+
+enum class CommandNames {
+    LIGHT_ON,
+    LIGHT_OFF,
+    STEREO_ON,
+    STEREO_OFF,
+    CEILING_FAN_ON,
+    CEILING_FAN_OFF,
+    SET_CEILING_FAN_SPEED_HIGH,
+    SET_CEILING_FAN_SPEED_MEDIUM,
+    SET_CEILING_FAN_SPEED_LOW,
+    EVERYTHING_ON,
+    EVERYTHING_OFF
+}
