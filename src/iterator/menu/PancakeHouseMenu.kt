@@ -24,6 +24,6 @@ class PancakeHouseMenu(
     }
 
     override fun createIterator(): MenuIterator {
-        return MenuIterator(items=menuItems)
+        return MenuIterator(items = menuItems)
     }
 }

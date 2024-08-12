@@ -14,7 +14,7 @@ class CachedYoutubeClass(
 
     override fun getVideoInfo(id: Int): YoutubeVideo {
         if (videoCache == null) {
-            videoCache = service.getVideoInfo(id=id)
+            videoCache = service.getVideoInfo(id = id)
         }
         return videoCache!!
     }

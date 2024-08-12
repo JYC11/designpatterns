@@ -18,8 +18,4 @@ class ChicagoStyleAnchovyPizza(
     pepperoni: Pepperoni? = null,
     vegetables: List<Vegetables>? = null,
     anchovy: Anchovy? = null,
-) : AnchovyPizza(name, ingredientFactory, dough, sauce, cheese, pepperoni, vegetables, anchovy) {
-    override fun prepare() {
-        TODO("Not yet implemented")
-    }
-}
+) : AnchovyPizza(name, ingredientFactory, dough, sauce, cheese, pepperoni, vegetables, anchovy)

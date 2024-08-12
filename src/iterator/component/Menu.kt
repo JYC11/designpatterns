@@ -1,7 +1,5 @@
 package iterator.component
 
-import iterator.component.MenuComponent
-
 class Menu(
     val name: String,
     val description: String,

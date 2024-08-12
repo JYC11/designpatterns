@@ -6,6 +6,7 @@ class Light(
     fun on() {
         println("$name light on")
     }
+
     fun off() {
         println("$name light off")
     }

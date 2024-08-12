@@ -13,9 +13,6 @@ import factory.ingredients.base.vegetables.Vegetables
 import factory.ingredients.chicago.FrozenAnchovy
 import factory.ingredients.chicago.MozzarellaCheese
 import factory.ingredients.chicago.PlumTomatoSauce
-import factory.ingredients.ny.FreshAnchovy
-import factory.ingredients.ny.MarinaraSauce
-import factory.ingredients.ny.ReggianoCheese
 import factory.ingredients.ny.ThinCrustDough
 
 class ChicagoPizzaIngredientFactory : IPizzaIngredientFactory {

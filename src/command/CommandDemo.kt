@@ -30,20 +30,24 @@ fun commandDemo() {
         Pair(CommandNames.SET_CEILING_FAN_SPEED_HIGH, SetCeilingFanSpeedHigh(ceilingFan)),
         Pair(CommandNames.SET_CEILING_FAN_SPEED_MEDIUM, SetCeilingFanSpeedMedium(ceilingFan)),
         Pair(CommandNames.SET_CEILING_FAN_SPEED_LOW, SetCeilingFanSpeedLow(ceilingFan)),
-        Pair(CommandNames.EVERYTHING_ON, MacroCommand(
-            listOf(
-                LightOn(livingRoomLight),
-                StereoOnWithCD(stereo),
-                CeilingFanOn(ceilingFan),
+        Pair(
+            CommandNames.EVERYTHING_ON, MacroCommand(
+                listOf(
+                    LightOn(livingRoomLight),
+                    StereoOnWithCD(stereo),
+                    CeilingFanOn(ceilingFan),
+                )
             )
-        )),
-        Pair(CommandNames.EVERYTHING_OFF, MacroCommand(
-            listOf(
-                LightOff(livingRoomLight),
-                StereoOff(stereo),
-                CeilingFanOff(ceilingFan),
+        ),
+        Pair(
+            CommandNames.EVERYTHING_OFF, MacroCommand(
+                listOf(
+                    LightOff(livingRoomLight),
+                    StereoOff(stereo),
+                    CeilingFanOff(ceilingFan),
+                )
             )
-        )),
+        ),
     )
 
     remoteControl.bulkAddCommands(commandsToAdd)

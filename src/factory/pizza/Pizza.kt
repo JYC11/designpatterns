@@ -23,9 +23,11 @@ abstract class Pizza(
     fun bake() {
         println("baking $name pizza")
     }
+
     fun cut() {
         println("cutting $name pizza")
     }
+
     fun box() {
         println("boxing $name pizza")
     }

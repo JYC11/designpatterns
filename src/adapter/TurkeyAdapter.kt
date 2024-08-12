@@ -10,6 +10,7 @@ class TurkeyAdapter(
     override fun quack() {
         turkey.gobble()
     }
+
     override fun fly() {
         turkey.fly()
     }

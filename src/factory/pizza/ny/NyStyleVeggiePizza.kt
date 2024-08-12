@@ -7,7 +7,6 @@ import factory.ingredients.base.Dough
 import factory.ingredients.base.Pepperoni
 import factory.ingredients.base.Sauce
 import factory.ingredients.base.vegetables.Vegetables
-import factory.pizza.Pizza
 import factory.pizza.base.VeggiePizza
 
 class NyStyleVeggiePizza(
@@ -19,8 +18,4 @@ class NyStyleVeggiePizza(
     pepperoni: Pepperoni? = null,
     vegetables: List<Vegetables>? = null,
     anchovy: Anchovy? = null,
-) : VeggiePizza(name, ingredientFactory, dough, sauce, cheese, pepperoni, vegetables, anchovy) {
-    override fun prepare() {
-        TODO("Not yet implemented")
-    }
-}
+) : VeggiePizza(name, ingredientFactory, dough, sauce, cheese, pepperoni, vegetables, anchovy)
