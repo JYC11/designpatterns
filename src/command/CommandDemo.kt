@@ -1,20 +1,26 @@
 package command
 
-import command.appliances.CeilingFan
-import command.appliances.Light
-import command.appliances.Stereo
-import command.commands.MacroCommand
-import command.commands.ceilingfan.CeilingFanOff
-import command.commands.ceilingfan.CeilingFanOn
-import command.commands.ceilingfan.SetCeilingFanSpeedHigh
-import command.commands.ceilingfan.SetCeilingFanSpeedLow
-import command.commands.ceilingfan.SetCeilingFanSpeedMedium
-import command.commands.light.LightOff
-import command.commands.light.LightOn
-import command.commands.stereo.StereoOff
-import command.commands.stereo.StereoOnWithCD
+import command.fp.decrement
+import command.fp.execute
+import command.fp.increment
+import command.oop.CommandNames
+import command.oop.SimpleRemoteControl
+import command.oop.appliances.CeilingFan
+import command.oop.appliances.Light
+import command.oop.appliances.Stereo
+import command.oop.commands.MacroCommand
+import command.oop.commands.ceilingfan.CeilingFanOff
+import command.oop.commands.ceilingfan.CeilingFanOn
+import command.oop.commands.ceilingfan.SetCeilingFanSpeedHigh
+import command.oop.commands.ceilingfan.SetCeilingFanSpeedLow
+import command.oop.commands.ceilingfan.SetCeilingFanSpeedMedium
+import command.oop.commands.light.LightOff
+import command.oop.commands.light.LightOn
+import command.oop.commands.stereo.StereoOff
+import command.oop.commands.stereo.StereoOnWithCD
 
 fun commandDemo() {
+    // OOP
     val remoteControl = SimpleRemoteControl()
     val livingRoomLight = Light("living room light")
     val ceilingFan = CeilingFan()
@@ -55,4 +61,14 @@ fun commandDemo() {
     CommandNames.entries.forEach {
         remoteControl.execute(it)
     }
+
+    // FP
+    var value = 10
+    println("Initial value: $value")
+
+    value = execute(increment, value)
+    println("After increment: $value")
+
+    value = execute(decrement, value)
+    println("After decrement: $value")
 }

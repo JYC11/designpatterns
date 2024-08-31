@@ -1,10 +1,12 @@
 package observer
 
-import observer.observer.CurrentConditionDisplay
-import observer.observer.ForecastDisplay
-import observer.subject.WeatherData
+import observer.fp.publisher
+import observer.oop.observer.CurrentConditionDisplay
+import observer.oop.observer.ForecastDisplay
+import observer.oop.subject.WeatherData
 
 fun observerDemo() {
+    // OOP
     val weatherData = WeatherData()
     weatherData.registerObserver(
         observer = ForecastDisplay(weatherData),
@@ -17,4 +19,7 @@ fun observerDemo() {
         humidity = 20.0f,
         pressure = 40.0f,
     )
+
+    // FP
+    publisher()
 }

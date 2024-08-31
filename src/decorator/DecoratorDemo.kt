@@ -1,15 +1,18 @@
 package decorator
 
-import decorator.beverages.Beverage
-import decorator.beverages.DarkRoast
-import decorator.beverages.Espresso
-import decorator.beverages.HouseBlend
-import decorator.beverages.Size
-import decorator.condiments.Mocha
-import decorator.condiments.Soy
-import decorator.condiments.Whip
+import decorator.fp.journalist
+import decorator.fp.originalSpeaker
+import decorator.oop.beverages.Beverage
+import decorator.oop.beverages.DarkRoast
+import decorator.oop.beverages.Espresso
+import decorator.oop.beverages.HouseBlend
+import decorator.oop.beverages.Size
+import decorator.oop.condiments.Mocha
+import decorator.oop.condiments.Soy
+import decorator.oop.condiments.Whip
 
 fun decoratorDemo() {
+    // OOP
     val beverage: Beverage = Espresso(size = Size.GRANDE)
     beverage.display()
 
@@ -24,4 +27,8 @@ fun decoratorDemo() {
     beverage3 = Mocha(beverage = beverage3)
     beverage3 = Whip(beverage = beverage3)
     beverage3.display()
+
+    // FP
+    val newsArticle: (String) -> String = journalist(::originalSpeaker)
+    println(newsArticle("fluffy"))
 }

@@ -1,15 +1,18 @@
 package facade
 
-import facade.appliances.Amplifier
-import facade.appliances.PopcornPopper
-import facade.appliances.Projector
-import facade.appliances.Screen
-import facade.appliances.StreamingPlayer
-import facade.appliances.TheaterLights
-import facade.appliances.Tuner
+import facade.fp.cookRamen
+import facade.oop.HomeTheaterFacade
+import facade.oop.appliances.Amplifier
+import facade.oop.appliances.PopcornPopper
+import facade.oop.appliances.Projector
+import facade.oop.appliances.Screen
+import facade.oop.appliances.StreamingPlayer
+import facade.oop.appliances.TheaterLights
+import facade.oop.appliances.Tuner
 
 
 fun facadeDemo() {
+    // OOP
     val facade = HomeTheaterFacade(
         amplifier = Amplifier(),
         popper = PopcornPopper(),
@@ -23,6 +26,9 @@ fun facadeDemo() {
     facade.watchMove("Shrek the Third")
 
     facade.endMovie()
+
+    // FP
+    cookRamen()
 }
 
 
