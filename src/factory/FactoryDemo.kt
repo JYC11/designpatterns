@@ -1,6 +1,6 @@
 package factory
 
-import factory.fp.makeGameLevel
+import factory.fp.makeFantasyGameLevel
 import factory.fp.setDirtTiles
 import factory.fp.setGold
 import factory.fp.setNoLoot
@@ -25,13 +25,13 @@ fun factoryDemo() {
     println(nyPepperoniPizza)
 
     // FP
-    makeGameLevel(
+    makeFantasyGameLevel(
         setStoneWalls,
         setStoneTiles,
         spawnImps,
         setGold
     )
-    makeGameLevel(
+    makeFantasyGameLevel(
         setWoodWalls,
         setDirtTiles,
         spawnWolves,

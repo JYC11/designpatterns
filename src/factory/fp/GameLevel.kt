@@ -5,12 +5,10 @@ typealias SetFloors = () -> Unit
 typealias SetEnemies = () -> Unit
 typealias SetLoot = () -> Unit
 
-fun makeGameLevel(
-    wallSetter: SetWalls,
-    floorSetter: SetFloors,
-    enemySetter: SetEnemies,
-    lootSetter: SetLoot,
-) {
+typealias GameLevelMaker = (SetWalls, SetFloors, SetEnemies, SetLoot) -> Unit
+
+val makeFantasyGameLevel : GameLevelMaker = {
+    wallSetter, floorSetter, enemySetter, lootSetter ->
     wallSetter()
     floorSetter()
     enemySetter()
