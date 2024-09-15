@@ -3,7 +3,7 @@ package iterator
 import iterator.menu.DinnerMenu
 import iterator.menu.PancakeHouseMenu
 
-fun iteratorDemo() {
+fun main() {
     val waitress = Waitress(
         dinnerMenu = DinnerMenu(),
         pancakeHouseMenu = PancakeHouseMenu(),

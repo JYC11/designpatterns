@@ -5,8 +5,8 @@ import observer.oop.observer.CurrentConditionDisplay
 import observer.oop.observer.ForecastDisplay
 import observer.oop.subject.WeatherData
 
-fun observerDemo() {
-    // OOP
+fun main() {
+    println("OOP")
     val weatherData = WeatherData()
     weatherData.registerObserver(
         observer = ForecastDisplay(weatherData),
@@ -19,7 +19,12 @@ fun observerDemo() {
         humidity = 20.0f,
         pressure = 40.0f,
     )
+    weatherData.setMeasurements(
+        temperature = 30.0f,
+        humidity = 50.0f,
+        pressure = 10.0f,
+    )
 
-    // FP
+    println("FP")
     publisher()
 }

@@ -2,7 +2,7 @@ package observer.fp
 
 typealias Subscriber = () -> Unit
 
-fun registerSubscriber(subscribers: MutableList<Subscriber>, subscriber: () -> Unit) {
+fun registerSubscriber(subscribers: MutableList<Subscriber>, subscriber: Subscriber) {
     subscribers.add(subscriber)
 }
 

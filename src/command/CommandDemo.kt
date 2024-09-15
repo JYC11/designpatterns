@@ -19,8 +19,8 @@ import command.oop.commands.light.LightOn
 import command.oop.commands.stereo.StereoOff
 import command.oop.commands.stereo.StereoOnWithCD
 
-fun commandDemo() {
-    // OOP
+fun main() {
+    println("OOP")
     val remoteControl = SimpleRemoteControl()
     val livingRoomLight = Light("living room light")
     val ceilingFan = CeilingFan()
@@ -62,7 +62,7 @@ fun commandDemo() {
         remoteControl.execute(it)
     }
 
-    // FP
+    println("FP")
     var value = 10
     println("Initial value: $value")
 

@@ -7,7 +7,7 @@ fun getRamen() = println("getting ramen")
 fun putNoodlesInPot() = println("putting noodles in pot")
 fun putSeasoningInPot() = println("put seasoning in pot")
 fun waitForThreeMinutes() = println("wait For 3 minutes")
-fun takePotOffFire() = println("taking pot of fire")
+fun takePotOffFire() = println("taking pot off fire")
 
 fun cookRamen() {
     getPot()

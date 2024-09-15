@@ -5,8 +5,8 @@ import builder.oop.CarBuilder
 import builder.oop.CarType
 import builder.oop.carparts.Engine
 
-fun builderDemo() {
-    // OOP
+fun main() {
+    println("OOP")
     val car = CarBuilder()
         .setType(CarType.SEDAN)
         .setSeats(4)
@@ -14,7 +14,7 @@ fun builderDemo() {
         .build()
     println(car)
 
-    // FP
+    println("FP")
     makeCoffee()
     makeCoffee("latte", 10, 100, 50)
 }

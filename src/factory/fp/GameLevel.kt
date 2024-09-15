@@ -1,28 +1,94 @@
 package factory.fp
 
-typealias SetWalls = () -> Unit
-typealias SetFloors = () -> Unit
-typealias SetEnemies = () -> Unit
-typealias SetLoot = () -> Unit
 
-typealias GameLevelMaker = (SetWalls, SetFloors, SetEnemies, SetLoot) -> Unit
+data class GameLevel(
+    var walls: String? = null,
+    var floors: String? = null,
+    var enemies: String? = null,
+    var loot: String? = null,
+)
 
-val makeFantasyGameLevel : GameLevelMaker = {
-    wallSetter, floorSetter, enemySetter, lootSetter ->
-    wallSetter()
-    floorSetter()
-    enemySetter()
-    lootSetter()
+
+typealias SetWalls = (level: GameLevel) -> GameLevel
+typealias SetFloors = (level: GameLevel) -> GameLevel
+typealias SetEnemies = (level: GameLevel) -> GameLevel
+typealias SetLoot = (level: GameLevel) -> GameLevel
+
+typealias GameLevelMaker = (SetWalls, SetFloors, SetEnemies, SetLoot) -> GameLevel
+
+val makeFantasyGameLevel: GameLevelMaker = { wallSetter, floorSetter, enemySetter, lootSetter ->
+    var level = GameLevel()
+    level = wallSetter(level)
+    level = floorSetter(level)
+    level = enemySetter(level)
+    level = lootSetter(level)
+    level
 }
 
-val setStoneWalls: SetWalls = { println("setting stone walls") }
-val setWoodWalls: SetWalls = { println("setting stone walls") }
+val setStoneWalls: SetWalls = { level ->
+    GameLevel(
+        walls = "stone",
+        floors = level.floors,
+        enemies = level.enemies,
+        loot = level.loot,
+    )
+}
+val setWoodWalls: SetWalls = { level ->
+    GameLevel(
+        walls = "wood",
+        floors = level.floors,
+        enemies = level.enemies,
+        loot = level.loot,
+    )
+}
 
-val setStoneTiles: SetFloors = { println("setting stone floor") }
-val setDirtTiles: SetFloors = { println("setting dirt floors") }
+val setStoneTiles: SetFloors = { level ->
+    GameLevel(
+        walls = level.walls,
+        floors = "stone",
+        enemies = level.enemies,
+        loot = level.loot,
+    )
+}
+val setDirtTiles: SetFloors = { level ->
+    GameLevel(
+        walls = level.walls,
+        floors = "dirt",
+        enemies = level.enemies,
+        loot = level.loot,
+    )
+}
 
-val spawnImps: SetEnemies = { println("spawning imps") }
-val spawnWolves: SetWalls = { println("spawning wolves") }
+val spawnImps: SetEnemies = { level ->
+    GameLevel(
+        walls = level.walls,
+        floors = level.floors,
+        enemies = "imp",
+        loot = level.loot,
+    )
+}
+val spawnWolves: SetWalls = { level ->
+    GameLevel(
+        walls = level.walls,
+        floors = level.floors,
+        enemies = "wolf",
+        loot = level.loot,
+    )
+}
 
-val setNoLoot: SetLoot = { println("setting no loot") }
-val setGold: SetLoot = { println("setting random amounts of gold") }
+val setNoLoot: SetLoot = { level ->
+    GameLevel(
+        walls = level.walls,
+        floors = level.floors,
+        enemies = level.enemies,
+        loot = null,
+    )
+}
+val setGold: SetLoot = { level ->
+    GameLevel(
+        walls = level.walls,
+        floors = level.floors,
+        enemies = level.enemies,
+        loot = "gold",
+    )
+}

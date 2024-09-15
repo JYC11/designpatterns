@@ -7,8 +7,8 @@ import strategy.fp.yap
 import strategy.oop.MallardDuck
 import strategy.oop.RubberDuck
 
-fun strategyDemo() {
-    // OOP
+fun main() {
+    println("OOP")
     val mallardDuck = MallardDuck()
     val rubberDuck = RubberDuck()
 
@@ -18,7 +18,7 @@ fun strategyDemo() {
     rubberDuck.fly()
     rubberDuck.quack()
 
-    // FP
+    println("FP")
     dogMakesSound("jack russel terrier", bark)
     dogMakesSound("tibetian mastiff", woof)
     dogMakesSound("chihuahua", yap)

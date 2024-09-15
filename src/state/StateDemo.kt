@@ -5,7 +5,8 @@ import state.fp.decelerate
 import state.fp.newCar
 import state.oop.GumballMachine
 
-fun stateDemo() {
+fun main() {
+    println("OOP")
     val machine = GumballMachine(numberGumballs = 10)
 
     for (i in 1..5) {
@@ -13,11 +14,15 @@ fun stateDemo() {
         machine.turnCrank()
     }
 
+    println("FP")
     val car = newCar()
-    var newCarState = accelerate(car, 100)
-    println(newCarState.first)
-    newCarState = decelerate(car, 50)
-    println(newCarState.first)
-    newCarState = decelerate(car, 50)
-    println(newCarState.first)
+    var res = accelerate(car, 100)
+    if (res.second != null) println(res.second)
+    println(res.first)
+    res = decelerate(res.first!!, 50)
+    if (res.second != null) println(res.second)
+    println(res.first)
+    res = decelerate(res.first!!, 50)
+    if (res.second != null) println(res.second)
+    println(res.first)
 }

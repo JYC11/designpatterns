@@ -11,8 +11,8 @@ import decorator.oop.condiments.Mocha
 import decorator.oop.condiments.Soy
 import decorator.oop.condiments.Whip
 
-fun decoratorDemo() {
-    // OOP
+fun main() {
+    println("OOP")
     val beverage: Beverage = Espresso(size = Size.GRANDE)
     beverage.display()
 
@@ -28,7 +28,7 @@ fun decoratorDemo() {
     beverage3 = Whip(beverage = beverage3)
     beverage3.display()
 
-    // FP
+    println("FP")
     val newsArticle: (String) -> String = journalist(::originalSpeaker)
     println(newsArticle("fluffy"))
 }

@@ -9,13 +9,13 @@ import factory.oop.ingredients.base.Sauce
 import factory.oop.ingredients.base.vegetables.Vegetables
 import factory.oop.pizza.base.CheesePizza
 
-class ChicagoStyleCheesePizza(
-    name: String,
-    ingredientFactory: IPizzaIngredientFactory,
-    dough: Dough? = null,
-    sauce: Sauce? = null,
-    cheese: Cheese? = null,
-    pepperoni: Pepperoni? = null,
-    vegetables: List<Vegetables>? = null,
-    anchovy: Anchovy? = null,
+data class ChicagoStyleCheesePizza(
+    override val name: String,
+    override val ingredientFactory: IPizzaIngredientFactory,
+    override var dough: Dough? = null,
+    override var sauce: Sauce? = null,
+    override var cheese: Cheese? = null,
+    override var pepperoni: Pepperoni? = null,
+    override var vegetables: List<Vegetables>? = null,
+    override var anchovy: Anchovy? = null,
 ) : CheesePizza(name, ingredientFactory, dough, sauce, cheese, pepperoni, vegetables, anchovy)

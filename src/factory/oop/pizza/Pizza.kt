@@ -9,14 +9,14 @@ import factory.oop.ingredients.base.Sauce
 import factory.oop.ingredients.base.vegetables.Vegetables
 
 abstract class Pizza(
-    val name: String,
-    val ingredientFactory: IPizzaIngredientFactory,
-    var dough: Dough? = null,
-    var sauce: Sauce? = null,
-    var cheese: Cheese? = null,
-    var pepperoni: Pepperoni? = null,
-    var vegetables: List<Vegetables>? = null,
-    var anchovy: Anchovy? = null,
+    open val name: String,
+    open val ingredientFactory: IPizzaIngredientFactory,
+    open var dough: Dough? = null,
+    open var sauce: Sauce? = null,
+    open var cheese: Cheese? = null,
+    open var pepperoni: Pepperoni? = null,
+    open var vegetables: List<Vegetables>? = null,
+    open var anchovy: Anchovy? = null,
 ) {
     abstract fun prepare()
 

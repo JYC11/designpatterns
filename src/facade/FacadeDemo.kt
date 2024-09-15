@@ -11,8 +11,8 @@ import facade.oop.appliances.TheaterLights
 import facade.oop.appliances.Tuner
 
 
-fun facadeDemo() {
-    // OOP
+fun main() {
+    println("OOP")
     val facade = HomeTheaterFacade(
         amplifier = Amplifier(),
         popper = PopcornPopper(),
@@ -27,7 +27,7 @@ fun facadeDemo() {
 
     facade.endMovie()
 
-    // FP
+    println("FP")
     cookRamen()
 }
 

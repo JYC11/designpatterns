@@ -39,4 +39,6 @@ class NyPizzaIngredientFactory : IPizzaIngredientFactory {
     override fun createPepperoni(): Pepperoni {
         return Pepperoni()
     }
+
+    override fun toString(): String = "NyPizzaIngredientFactory"
 }

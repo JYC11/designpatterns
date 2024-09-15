@@ -14,27 +14,29 @@ import factory.oop.NyPizzaStore
 import factory.oop.pizza.PizzaType
 import factory.oop.pizza.SimplePizzaFactory
 
-fun factoryDemo() {
-    // OOP
+fun main() {
+    println("OOP")
     val chicagoPizzaStore = ChicagoPizzaStore(pizzaFactory = SimplePizzaFactory())
     val nyPizzaStore = NyPizzaStore(pizzaFactory = SimplePizzaFactory())
 
     val chicagoCheesePizza = chicagoPizzaStore.createPizza(type = PizzaType.CHEESE)
     val nyPepperoniPizza = nyPizzaStore.createPizza(type = PizzaType.PEPPERONI)
-    println(chicagoCheesePizza)
-    println(nyPepperoniPizza)
+    println(chicagoCheesePizza.toString())
+    println(nyPepperoniPizza.toString())
 
-    // FP
-    makeFantasyGameLevel(
-        setStoneWalls,
-        setStoneTiles,
-        spawnImps,
-        setGold
-    )
-    makeFantasyGameLevel(
+    println("FP")
+    val forest = makeFantasyGameLevel(
         setWoodWalls,
         setDirtTiles,
         spawnWolves,
         setNoLoot
     )
+    println(forest.toString())
+    val dungeon = makeFantasyGameLevel(
+        setStoneWalls,
+        setStoneTiles,
+        spawnImps,
+        setGold
+    )
+    println(dungeon.toString())
 }

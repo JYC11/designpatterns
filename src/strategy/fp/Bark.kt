@@ -15,5 +15,5 @@ val yap: BarkStrategy = {
 }
 
 fun dogMakesSound(dogName: String, strategy: BarkStrategy) {
-    println("$dogName makes sound $strategy")
+    println("$dogName makes sound ${strategy()}")
 }
