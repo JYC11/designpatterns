@@ -21,8 +21,8 @@ fun main() {
 
     val chicagoCheesePizza = chicagoPizzaStore.createPizza(type = PizzaType.CHEESE)
     val nyPepperoniPizza = nyPizzaStore.createPizza(type = PizzaType.PEPPERONI)
-    println(chicagoCheesePizza.toString())
-    println(nyPepperoniPizza.toString())
+    println(chicagoCheesePizza)
+    println(nyPepperoniPizza)
 
     println("FP")
     val forest = makeFantasyGameLevel(
@@ -31,12 +31,12 @@ fun main() {
         spawnWolves,
         setNoLoot
     )
-    println(forest.toString())
+    println(forest)
     val dungeon = makeFantasyGameLevel(
         setStoneWalls,
         setStoneTiles,
         spawnImps,
         setGold
     )
-    println(dungeon.toString())
+    println(dungeon)
 }
