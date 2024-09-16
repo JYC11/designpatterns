@@ -1,6 +1,10 @@
 package builder
 
-import builder.fp.makeCoffee
+import builder.fp.House
+import builder.fp.buildBathroom
+import builder.fp.buildBedroom
+import builder.fp.buildLivingRoom
+import builder.fp.compose
 import builder.oop.CarBuilder
 import builder.oop.CarType
 import builder.oop.carparts.Engine
@@ -15,6 +19,12 @@ fun main() {
     println(car)
 
     println("FP")
-    makeCoffee()
-    makeCoffee("latte", 10, 100, 50)
+    val build = compose(
+        buildLivingRoom,
+        buildBedroom,
+        buildBedroom,
+        buildBathroom
+    )
+    val house = build(House())
+    println(house)
 }
