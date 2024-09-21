@@ -1,5 +1,6 @@
 package builder
 
+import builder.fp.Builder
 import builder.fp.House
 import builder.fp.buildBathroom
 import builder.fp.buildBedroom
@@ -19,12 +20,16 @@ fun main() {
     println(car)
 
     println("FP")
-    val build = compose(
+    val build: Builder = compose(
         buildLivingRoom,
         buildBedroom,
         buildBedroom,
         buildBathroom
     )
     val house = build(House())
+//    buildLivingRoom(House())
+//    buildBedroom(buildLivingRoom(House()))
+//    buildBedroom(buildBedroom(buildLivingRoom(House())))
+//    buildBathroom(buildBedroom(buildBedroom(buildLivingRoom(House()))))
     println(house)
 }

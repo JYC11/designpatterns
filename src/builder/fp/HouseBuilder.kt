@@ -9,15 +9,27 @@ data class House(
 typealias Builder = (House) -> House
 
 val buildLivingRoom: Builder = { house ->
-    house.copy(livingRooms = house.livingRooms + 1)
+    House(
+        livingRooms = house.livingRooms + 1,
+        bedrooms = house.bedrooms,
+        bathrooms = house.bathrooms
+    )
 }
 
 val buildBedroom: Builder = { house ->
-    house.copy(bedrooms = house.bedrooms + 1)
+    House(
+        livingRooms = house.livingRooms,
+        bedrooms = house.bedrooms,
+        bathrooms = house.bathrooms + 1
+    )
 }
 
 val buildBathroom: Builder = { house ->
-    house.copy(bathrooms = house.bathrooms + 1)
+    House(
+        livingRooms = house.livingRooms,
+        bedrooms = house.bedrooms,
+        bathrooms = house.bathrooms + 1
+    )
 }
 
 fun compose(vararg builders: Builder): Builder = { initialHouse ->
