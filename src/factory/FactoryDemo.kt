@@ -19,8 +19,8 @@ fun main() {
     val chicagoPizzaStore = ChicagoPizzaStore(pizzaFactory = SimplePizzaFactory())
     val nyPizzaStore = NyPizzaStore(pizzaFactory = SimplePizzaFactory())
 
-    val chicagoCheesePizza = chicagoPizzaStore.createPizza(type = PizzaType.CHEESE)
-    val nyPepperoniPizza = nyPizzaStore.createPizza(type = PizzaType.PEPPERONI)
+    val chicagoCheesePizza = chicagoPizzaStore.orderPizza(type = PizzaType.CHEESE)
+    val nyPepperoniPizza = nyPizzaStore.orderPizza(type = PizzaType.PEPPERONI)
     println(chicagoCheesePizza)
     println(nyPepperoniPizza)
 

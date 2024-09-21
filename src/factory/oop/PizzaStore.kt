@@ -8,7 +8,7 @@ abstract class PizzaStore(
     val pizzaFactory: SimplePizzaFactory
 ) {
     fun orderPizza(type: PizzaType): Pizza {
-        return createPizza(type).also {
+        return this.createPizza(type).also {
             it.prepare()
             it.bake()
             it.cut()

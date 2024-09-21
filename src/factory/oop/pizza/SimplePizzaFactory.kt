@@ -16,7 +16,7 @@ class SimplePizzaFactory {
 
     fun createNyStylePizza(type: PizzaType): Pizza {
         val ingredientFactory = NyPizzaIngredientFactory()
-        val pizza = when (type) {
+        return when (type) {
             PizzaType.CHEESE -> NyStyleCheesePizza(
                 name = "NY cheese pizza",
                 ingredientFactory = ingredientFactory,
@@ -37,13 +37,11 @@ class SimplePizzaFactory {
                 ingredientFactory = ingredientFactory,
             )
         }
-        pizza.prepare()
-        return pizza
     }
 
     fun createChicagoStylePizza(type: PizzaType): Pizza {
         val ingredientFactory = ChicagoPizzaIngredientFactory()
-        val pizza = when (type) {
+        return when (type) {
             PizzaType.CHEESE -> ChicagoStyleCheesePizza(
                 name = "Chicago cheese pizza",
                 ingredientFactory = ingredientFactory,
@@ -64,7 +62,5 @@ class SimplePizzaFactory {
                 ingredientFactory = ingredientFactory,
             )
         }
-        pizza.prepare()
-        return pizza
     }
 }
