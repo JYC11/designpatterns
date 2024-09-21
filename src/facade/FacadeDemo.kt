@@ -23,7 +23,7 @@ fun main() {
         tuner = Tuner()
     )
 
-    facade.watchMove("Shrek the Third")
+    facade.watchMovie("Shrek the Third")
 
     facade.endMovie()
 

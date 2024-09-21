@@ -17,7 +17,7 @@ class HomeTheaterFacade(
     private val theaterLights: TheaterLights,
     private val tuner: Tuner,
 ) {
-    fun watchMove(movie: String) {
+    fun watchMovie(movie: String) {
         println("Starting movie: $movie")
         popper.on()
         popper.pop()

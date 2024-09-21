@@ -27,8 +27,8 @@ val buildBedroom: Builder = { house ->
 val buildBathroom: Builder = { house ->
     House(
         livingRooms = house.livingRooms,
-        bedrooms = house.bedrooms,
-        bathrooms = house.bathrooms + 1
+        bedrooms = house.bedrooms + 1,
+        bathrooms = house.bathrooms
     )
 }
 

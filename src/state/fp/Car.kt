@@ -39,7 +39,6 @@ fun decelerate(car: Car, speed: Long): Pair<Car?, CarError?> {
                 return Pair(Car.Decelerating(car.speed - speed), null)
             }
         }
-
         is Car.Stopped -> Pair(null, CarError("Car already stopped"))
     }
 }
