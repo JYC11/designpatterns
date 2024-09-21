@@ -58,8 +58,8 @@ fun main() {
 
     remoteControl.bulkAddCommands(commandsToAdd)
 
-    CommandNames.entries.forEach {
-        remoteControl.execute(it)
+    for (command in CommandNames.entries) {
+        remoteControl.execute(command)
     }
 
     println("FP")

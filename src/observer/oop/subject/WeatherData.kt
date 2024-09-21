@@ -18,8 +18,8 @@ class WeatherData(
     }
 
     override fun notifyObservers() {
-        observers.forEach {
-            it.update()
+        for (observer in observers) {
+            observer.update()
         }
     }
 
