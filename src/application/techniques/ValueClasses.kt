@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 @JvmInline
 value class UserId(val value: String)
@@ -19,5 +19,5 @@ fun assignUserToOrg(userId: UserId, orgId: OrgId) { /* ... */
 
 fun main() {
     assignUserToOrg(UserId("abc"), OrgId("xyz"))
-    assignUserToOrg(OrgId("abc"), UserId("xyz"))
+//    assignUserToOrg(OrgId("abc"), UserId("xyz"))
 }

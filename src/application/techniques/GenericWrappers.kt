@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 class Encrypted<T>(val ciphertext: String)
 class Plain<T>(val value: T)

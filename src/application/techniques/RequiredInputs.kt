@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 class UnvalidatedApplication(val name: String?, val dob: String?)
 class ValidatedApplication(val name: String, val dob: String)

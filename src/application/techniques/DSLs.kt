@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 class FormBuilder {
     private var hasSubmit = false
@@ -19,10 +19,10 @@ fun form(init: FormBuilder.() -> FormBuilder.SubmitAdded) {
 }
 
 fun main() {
-    form {
-        input("email")
-        // no submitButton -> compile error
-    }
+//    form {
+//        input("email")
+//        // no submitButton -> compile error
+//    }
 
     form {
         input("email")

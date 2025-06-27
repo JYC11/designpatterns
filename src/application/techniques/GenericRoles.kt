@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 interface Role
 object Admin : Role
@@ -16,5 +16,5 @@ fun main() {
     val adminSession = Session(UserId("123"), Admin)
     accessSensitiveSettings(adminSession)
     val regularSession = Session(UserId("123"), RegularUser)
-    accessSensitiveSettings(regularSession)
+//    accessSensitiveSettings(regularSession)
 }

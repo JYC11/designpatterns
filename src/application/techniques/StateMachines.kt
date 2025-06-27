@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 sealed interface LoanState
 object ApplicationSubmitted : LoanState

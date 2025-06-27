@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 sealed interface AllowedForRefund
 class CompletedOrder : AllowedForRefund
@@ -14,5 +14,5 @@ fun <T : AllowedForRefund> processRefund(order: T) {
 fun main() {
     processRefund(CompletedOrder())
     processRefund(CanceledOrder())
-    processRefund(PendingOrder()) // won't compile
+//    processRefund(PendingOrder()) // won't compile
 }

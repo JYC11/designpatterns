@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 sealed class PaymentMethod {
     abstract fun pay(amount: Int)

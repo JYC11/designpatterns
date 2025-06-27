@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 interface Verified
 interface Unverified
@@ -21,6 +21,6 @@ val email = Email<Unverified>("foo@example.com")
 
 fun main() {
     sendWelcomeEmail(verify(email))
-    sendWelcomeEmail(email)
+//    sendWelcomeEmail(email)
 }
 

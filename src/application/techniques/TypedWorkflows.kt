@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 data class Item(val name: String)
 

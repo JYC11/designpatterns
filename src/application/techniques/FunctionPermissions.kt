@@ -1,4 +1,4 @@
-package application
+package application.techniques
 
 interface AccountState
 
@@ -13,5 +13,5 @@ fun <T : Active> withdraw(account: BankAccount<T>, amount: Int) {
 
 fun main() {
     val account = BankAccount<Frozen>("123")
-    withdraw(account, 100)
+//    withdraw(account, 100)
 }
